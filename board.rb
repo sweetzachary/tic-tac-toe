@@ -14,7 +14,11 @@ class Board
   def put_symbol(number, symbol)
     col = number % @side
     row = number / @side
-    @cells[row][col].content = symbol
+    if @cells[row][col].content == ' '
+      @cells[row][col].content = symbol
+    else
+      false
+    end
   end
 
   def display
