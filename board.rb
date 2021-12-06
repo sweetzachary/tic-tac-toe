@@ -1,4 +1,4 @@
-class Field
+class Board
   def initialize(side)
     @side = side
     @cells = Array(side) { Array(side) { Cell.new } }
