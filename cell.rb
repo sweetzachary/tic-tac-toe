@@ -7,10 +7,12 @@ class Cell
     @content == symbol
   end
 
-  attr_reader :content
+  def content
+    @content.nil? ? ' ' : @content
+  end
 
   def content=(symbol)
-    if @content == nil
+    if @content.nil?
       @content = symbol
     else
       false
